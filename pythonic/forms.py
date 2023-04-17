@@ -48,3 +48,6 @@ class UpdateProfileForm(FlaskForm):
             user = User.query.filter_by(email = email.data).first()
             if user:
                 raise ValidationError('E-mail alredy exists! Please chosse a differnt one')
+            
+class NewLessonForm(FlaskForm):
+    submit = SubmitField('Lesson')
